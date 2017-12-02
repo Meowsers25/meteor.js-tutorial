@@ -1,17 +1,17 @@
+Images = new Mongo.Collection("images");
+console.log(Images.find().count());
+
 if (Meteor.isClient) {
    var img_data = [
-   {
-      img_src:"laptops.jpg",
-      img_alt:"some laptops on a table" 
-   }, 
+   
    {
       img_src:"bass.jpg",
-      img_alt:"a bass player" 
-   }, 
+      img_alt:"a bass player"
+   },
    {
       img_src:"beard.jpg",
-      img_alt:"some musicians with beards" 
-   }, 
+      img_alt:"some musicians with beards"
+   },
 
    ];
 
@@ -32,4 +32,3 @@ if (Meteor.isServer) {
 
 
 console.log("where am I running");
-
