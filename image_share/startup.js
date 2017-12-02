@@ -7,6 +7,18 @@ if (Meteor.isServer) {
            img_alt:"some laptops on a table"
         }
       );
+      Images.insert(
+        {
+           img_src:"img_1.jpg",
+           img_alt:"image 1"
+        }
+      );
+      Images.insert(
+        {
+           img_src:"img_2.jpg",
+           img_alt:"image 2"
+        }
+      );
     }
   });
 }
