@@ -4,12 +4,18 @@
 
 <body>
 {{> image_add_form}}
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    {{> loginButtons}}
+  </div>
+
+</nav>
 
 
   <div class="container">
-    <h1>Welcome to image share!</h1>
+    <h1>Welcome to image share {{username}}!</h1>
 
-  {{> loginButtons}}
+
 <br/>
   {{> images}}
 </div>
@@ -42,13 +48,15 @@
   </template>
 
 <template name="images">
+  {{#if currentUser}}
   <button class="btn btn-success js-show-image-form">add image</button>
+  {{/if}}
 	<div class="row">
   {{#each images}}
   <div class="col-xs-12 col-md-3" id="{{_id}}">
   	<div class="thumbnail">
 
-  	 	<img class="js-image" src="{{img_src}}"
+  	 	<img class="js-image thumbnail-img" src="{{img_src}}"
   		alt="{{img_alt}}" />
 
   		<div class="caption">
