@@ -3,22 +3,21 @@
 </head>
 
 <body>
-{{> image_add_form}}
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    {{> loginButtons}}
-  </div>
+  {{> image_add_form}}
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      {{> loginButtons}}
+    </div>
 
-</nav>
+  </nav>
 
 
   <div class="container">
     <h1>Welcome to image share {{username}}!</h1>
 
 
-<br/>
-  {{> images}}
-</div>
+    <br/> {{> images}}
+  </div>
 </body>
 
 <template name="image_add_form">
